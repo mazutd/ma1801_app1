@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,7 +19,7 @@ public class EditDataActivity extends AppCompatActivity {
     private static final String TAG = "EditDataActivity";
     private ImageView backButton;
     private Button avBokaBtn;
-    private TextView editable_item, datum_item, antalElevertxt,klassrumtxt;
+    private TextView editable_item, datum_item, antalElevertxt, klassrumtxt;
     public static final String userName = "com.sourcey.materiallogindemo.MESSAGE";
     DatabaseHelper mDatabaseHelper;
     public static final String PREFERENCES_FILE_NAME = "MyAppPreferences";
@@ -31,14 +30,13 @@ public class EditDataActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_data_layout);
-        backButton = (ImageView) findViewById(R.id.backButton);
-        avBokaBtn = (Button) findViewById(R.id.avBokaBtn);
 
-        //btnDelete = (Button) findViewById(R.id.btnDelete);
-        editable_item = (TextView) findViewById(R.id.editable_item2);
-        datum_item = (TextView) findViewById(R.id.datumBokning);
-        antalElevertxt = (TextView) findViewById(R.id.editable_item4);
-        klassrumtxt = (TextView) findViewById(R.id.editable_item3);
+        backButton      = (ImageView) findViewById(R.id.backButton);
+        avBokaBtn       = (Button) findViewById(R.id.avBokaBtn);
+        editable_item   = (TextView) findViewById(R.id.editable_item2);
+        datum_item      = (TextView) findViewById(R.id.datumBokning);
+        antalElevertxt  = (TextView) findViewById(R.id.editable_item4);
+        klassrumtxt     = (TextView) findViewById(R.id.editable_item3);
         mDatabaseHelper = new DatabaseHelper(this);
 
 
@@ -49,9 +47,10 @@ public class EditDataActivity extends AppCompatActivity {
 
         //hämta namnet (Matcha namn och id  i databasen för att inte radera fel
         selectedName = receivedIntent.getStringExtra("name");
-        datum = receivedIntent.getStringExtra("datum");
-        antalElever = receivedIntent.getStringExtra("antalElever");
-        klassRum = receivedIntent.getStringExtra("klassRum");
+        datum        = receivedIntent.getStringExtra("datum");
+        antalElever  = receivedIntent.getStringExtra("antalElever");
+        klassRum     = receivedIntent.getStringExtra("klassRum");
+
 
         editable_item.setText(antalElever);
         datum_item.setText(antalElever);
@@ -68,7 +67,7 @@ public class EditDataActivity extends AppCompatActivity {
         avBokaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("EditDataActivity", "deleteknappen" + selectedID);
+                Log.d("EditDataActivity", "Klickad_deleteknapp" + selectedID);
                 mDatabaseHelper.deleteName(selectedID, selectedName);
                 editable_item.setText("");
                 toastMessage("Din bokninga har avbokats!");
