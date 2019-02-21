@@ -12,7 +12,6 @@ public class SplachScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
         EasySplashScreen config = new EasySplashScreen(SplachScreen.this)
             .withFullScreen()
                 .withTargetActivity(MainActivity.class)

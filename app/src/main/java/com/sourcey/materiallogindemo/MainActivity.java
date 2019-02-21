@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent();
             intent.putExtra(userName, userNameInlogg);
             setResult(RESULT_OK, intent);
-            Log.d("LoginActivity", "finns användare" + userNameInlogg);
+            Log.d("LoginActivity", " användaren finns" + userNameInlogg);
 
         } else {
             Log.d("MainActivity", "sssss: INTE INLOGGAD");
