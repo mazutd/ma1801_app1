@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="app_name">Nackademin App</string>
+
+        <string name="welcome_hej">Hello world!</string>
+        <string name="action_settings">Inställningar</string>
+        <string name="inget_konto_n_skapa_en">No account ? create account</string>
+        <string name="anv_ndarnamn">Username</string>
+        <string name="l_senord">Password</string>
+        <string name="logga_in">Log in</string>
+        <string name="todo1">TODO</string>
+        <string name="v_lkommen">Welcome</string>
+        <string name="todo">TODO</string>
+        <string name="todo2">TODO</string>
+        <string name="valkommen_text_under">Log in for booking class</string>
+        <string name="anv_ndare">User</string>
+        <string name="ko">TODO</string>
+        <string name="textview25">TextView</string>
+
+</resources>
