@@ -19,9 +19,9 @@ import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity {
     public static final String  EXTRA_MESSAGE = "com.sourcey.materiallogindemo.MESSAGE";
-    public static final String userName = "com.sourcey.materiallogindemo.MESSAGE";
-    private static final String TAG = "LoginActivity";
-    private static final int REQUEST_SIGNUP = 0;
+    public static final String userName       = "com.sourcey.materiallogindemo.MESSAGE";
+    private static final String TAG           = "LoginActivity";
+    private static final int REQUEST_SIGNUP   = 0;
     public static final String PREFERENCES_FILE_NAME = "MyAppPreferences";
 
     @BindView(R.id.input_email) EditText _emailText;
@@ -88,14 +88,12 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.show();
 
 
-        // TODO: Implement your own authentication logic here.
+        // TODO: Lägga till signup info (funk)
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
-                        // On complete call either onLoginSuccess or onLoginFailed
                         onLoginSuccess();
-                        // onLoginFailed();
                         progressDialog.dismiss();
                     }
                 }, 3500);
