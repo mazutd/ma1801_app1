@@ -59,8 +59,6 @@ public class bokanyActivity extends AppCompatActivity {
                 String userNameInlogg = mysettings.getString("ususe", null);
 
                 if (editText.length() != 0) {
-                    Log.d("LoginActivity", "Mianmian" + userNameInlogg);
-                    Log.d(TAG, "ddd" + selectedDates);
                     AddData(newEntry, userNameInlogg, selectedDates, klassRum);
                     editText.setText("");
                 } else {
@@ -86,7 +84,6 @@ public class bokanyActivity extends AppCompatActivity {
         boolean insertData = mDatabaseHelper.addData(newEntry, userNameInlogg, datum.toString(), klassRum);
 
         if (insertData) {
-            Log.d("bokanyActivity", "addat raden");
             toastMessage("Din bokning är klar");
             mDatabaseHelper.getData(userNameInlogg);
 
